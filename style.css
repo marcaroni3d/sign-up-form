@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+:root {
+    --primary-dark: #333333;
+    --primary-light: #ededed;
+    --secondary-light: #fdfdfd;
+    --primary-cool: #97b9e7;
+    --secondary-cool: #3c4c63;
+    --primary-warm: #ec9e9d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+}
+
+#left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url('images/mads-schmidt-rasmussen-xfngap_DToE-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#left-content > .banner {
+    width: 100%;
+    position: relative;
+    bottom: 15%;
+    background-color: rgba(51, 51, 51, .8);
+    color: var(--secondary-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.banner > img {
+    height: max(50px, 10rem);
+    padding: 1rem 0 1rem 0;
+}
+.banner > h1 {
+    font-size: 2rem;
+    width: 12ch;
+}
+
+#right-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 2rem;
+    background: var(--primary-light);
+}
+
+#right-content > header,
+#right-content > #input-section,
+#right-content > #submit-section {
+    padding-left: 1rem;
+}
+
+#input-section {
+    background-color: var(--secondary-light);
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
+}
+
+#input-section > h3 {
+    margin-top: 1rem;
+}
+
+#input-section > form {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    max-width: 80%;
+    margin: 2rem 0 2rem 0;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.form-input > input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid var(--primary-light);
+    font-size: .9rem;
+    margin-top: 3px;
+}
+
+#submit-section > button {
+    background-color: var(--primary-cool);
+    margin: 20px;
+    padding: 1rem;
+    font-size: inherit;
+    width: fit-content;
+    border-radius: 10px;
+    border: none;
+    transition: all .5s ease;
+}
+#submit-section > button:hover {
+    transform: scale(1.1);
+}
+#submit-section > h3 > a {
+    margin-left: 5px;
+}
+
+#github-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    align-self: center;
+}
+
+#github-link > a > img {
+    height: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
