@@ -20,6 +20,7 @@ body {
     height: 100vh;
 }
 
+/* LEFT CONTENT */
 #left-content {
     flex: 1;
     display: flex;
@@ -31,7 +32,7 @@ body {
     background-size: cover;
 }
 
-#left-content > .banner {
+.banner {
     width: 100%;
     position: relative;
     bottom: 15%;
@@ -47,10 +48,11 @@ body {
     padding: 1rem 0 1rem 0;
 }
 .banner > h1 {
-    font-size: 2rem;
-    width: 12ch;
+    font-size: 3rem;
 }
 
+
+/* RIGHT CONTENT */
 #right-content {
     flex: 2;
     display: flex;
@@ -72,10 +74,18 @@ body {
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.123);
 }
 
+.gradient-border {
+    background: linear-gradient(to right, var(--primary-cool), var(--primary-warm));
+    height: 2px;
+    width: auto;
+    margin-left: -2rem;
+}
+
 #input-section > h3 {
     margin-top: 1rem;
 }
 
+/* FORM */
 #input-section > form {
     display: flex;
     flex-flow: row wrap;
@@ -89,30 +99,53 @@ body {
     flex-direction: column;
     height: fit-content;
 }
-.form-input > input {
+
+input {
     padding: 5px 10px;
     border-radius: 5px;
-    border: 1px solid var(--primary-light);
+    border: 2px solid var(--primary-light);
     font-size: .9rem;
     margin-top: 3px;
+    max-width: 30ch;
+}
+input:focus {
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, .333);
+}
+
+.error {
+    font-size: .7rem;
+    color: red;
+    padding: 3px 3px 3px 3px;
+    max-width: 30ch;
 }
 
 #submit-section > button {
-    background-color: var(--primary-cool);
-    margin: 20px;
+    background: var(--primary-cool);
+    margin: 1rem 0 2rem 0;
     padding: 1rem;
     font-size: inherit;
     width: fit-content;
     border-radius: 10px;
     border: none;
-    transition: all .5s ease;
+    transition: all .3s ease;
 }
 #submit-section > button:hover {
     transform: scale(1.1);
+    background:var(--primary-warm);
+    cursor: pointer;
 }
-#submit-section > h3 > a {
+#log-in-link {
     margin-left: 5px;
+    color: var(--secondary-cool);
+    transition: all .3s ease;
 }
+#log-in-link:hover {
+    margin-left: 5px;
+    color: var(--primary-warm);
+}
+
+
+/* FOOTER */
 
 #github-link {
     display: flex;
@@ -124,8 +157,12 @@ body {
     align-self: center;
 }
 
-#github-link > a > img {
+#github-image-link {
     height: 20px;
     margin-left: 10px;
     cursor: pointer;
+    transition: all .3s ease;
+}
+#github-image-link:hover {
+    transform: scale(1.3);
 }
